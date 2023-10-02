@@ -1,31 +1,34 @@
-$search-bar-border: #e6e6e6;
-$stats-color: #70757a;
-$clear-button-color: #d9d9d9;
-$background-color: #fff;
-$font-color: #000;
-$logo-blue: #4885ed;
-$logo-red: #db3236;
-$logo-yellow: #ffc107;
-$logo-green: #3cba54;
-$link-color: #1a0dab;
-$link-visited-color: #609;
-$link-outline-color: #000;
-$font-stack: "Roboto", Arial, sans-serif;
+$main-background-color: #f5f5f5;
+$main-font-color: #0f0f0f;
+$main-font-stack: 'Roboto', sans-serif;
+$stats-color :#383838;
+$search-bar-border: #252525;
+
+$logo-color: #e2d30c;
+$logo-dark: #c9bc00;
+
+$link-color: #0dab99;
+$link-visited-color: #014e45;
+$link-outline-color: #0b443d;
+
+$clear-button-color: rgb(9, 9, 9);
+$search-bar-border: rgb(29, 29, 29);
+
 
 %flex {
     display: flex;
     align-items: center;
 }
 
-@mixin flexColumn {
-    @extend %flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
 @mixin flexCenter {
     @extend %flex;
     justify-content: center;
+}
+
+@mixin flexColumn{
+    @extend %flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 @mixin mq($size) {
@@ -34,21 +37,22 @@ $font-stack: "Roboto", Arial, sans-serif;
     }
 }
 
-* {
+*{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 html,
 body {
-    background-color: $background-color;
-    color: $font-color;
+    background-color: $main-background-color;
+    color: $main-font-color;
+    font-family: $main-font-stack;
     width: 100vw;
     min-height: 100vh;
-    font-family: $font-stack;
     font-size: 22px;
 }
+
 
 main {
     @include flexColumn;
@@ -61,7 +65,7 @@ footer {
     @include flexCenter;
 
     p {
-        color: $stats-color;
+        color: $main-font-color;
         font-size: 0.5rem;
 
         @include mq(768px) {
@@ -70,6 +74,11 @@ footer {
 
         a {
             color: $stats-color;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: #0f0f0f;
         }
     }
 }

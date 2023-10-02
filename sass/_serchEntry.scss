@@ -1,6 +1,6 @@
 .searchEntry {
     @include flexColumn;
-    padding-top: 40px;
+    padding-top: 60px;
 
     .logo {
         letter-spacing: -5px;
@@ -18,7 +18,7 @@
         width: 90vw;
         display: flex;
         border: 2px solid $search-bar-border;
-        border-radius: 500px;
+        border-radius: 40px;
         padding: 0.15rem 0.25rem 0.15rem 0.75rem;
 
         @include mq(768px) {
@@ -74,14 +74,14 @@
         .searchButton:hover,
         .searchButton:focus {
             i {
-                color: $logo-green;
+                color: $logo-color;
             }
         }
 
         .clear:hover,
         .clear:focus {
             i {
-                color: $logo-red;
+                color: $logo-dark;
             }
         }
 
@@ -105,6 +105,6 @@
 
     .searchBar:hover,
     .searchBar:focus-within {
-        box-shadow: 0 2px 5px 2px $search-bar-border;
+        box-shadow: 0 0 3px  $search-bar-border;
     }
 }
