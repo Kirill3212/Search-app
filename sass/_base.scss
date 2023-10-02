@@ -4,8 +4,8 @@ $main-font-stack: 'Roboto', sans-serif;
 $stats-color :#383838;
 $search-bar-border: #252525;
 
-$logo-color: #e2d30c;
-$logo-dark: #c9bc00;
+$logo-color: #666666;
+$logo-dark: #313131;
 
 $link-color: #0dab99;
 $link-visited-color: #014e45;
@@ -69,7 +69,7 @@ footer {
         font-size: 0.5rem;
 
         @include mq(768px) {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         a {
